@@ -10,6 +10,7 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
+        //usuarios con los 4 roles que hay//
         $user1 = User::updateOrCreate(
             [
                 'email' => 'funcionario@admin.cl',
@@ -33,7 +34,7 @@ class UserSeeder extends Seeder
                 'email' => 'Estudiante@admin.cl',
             ],
             [
-                'name' => 'SuperAdmin',
+                'name' => 'Estudiante',
                 'password' => Hash::make('12345678'),
             ]
         );
@@ -42,7 +43,7 @@ class UserSeeder extends Seeder
                 'email' => 'Visitante@admin.cl',
             ],
             [
-                'name' => 'SuperAdmin',
+                'name' => 'Visitante',
                 'password' => Hash::make('12345678'),
             ]
         );
